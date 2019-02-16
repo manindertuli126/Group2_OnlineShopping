@@ -8,10 +8,16 @@
 
 import Foundation
 
-class RegisterAndLogin : UserDetails{
+class RegisterAndLogin : UserDefaults{
     
-    func Register(){
-        
+    var FullName : String!
+    var Address : String!
+    var Phone : Int!
+    
+    func Register(FullName:String, Address:String, Phone:Int){
+        self.FullName = FullName
+        self.Address = Address
+        self.Phone = Phone
     }
     
     func Login(){
