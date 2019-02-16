@@ -8,5 +8,8 @@
 
 import Foundation
 
-print("Hello, World!")
+print("Welcome")
+var t1 = Customer()
+t1.Register()
+
 

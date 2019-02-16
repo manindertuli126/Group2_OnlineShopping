@@ -8,20 +8,20 @@
 
 import Foundation
 
-class UserDetails{
+public class UserDetails{
     var loginUser : String!
-    var userName : String!
+    var fullName : String!
     var loginUserPassword : String!
     
     init() {
         self.loginUser = String()
-        self.userName = String()
+        self.fullName = String()
         self.loginUserPassword = String()
     }
     
-    init(loginUser:String, userName:String, loginUserPassword:String) {
+    init(loginUser:String, fullName:String, loginUserPassword:String) {
         self.loginUser = loginUser
-        self.userName = userName
+        self.fullName = fullName
         self.loginUserPassword = loginUserPassword
 }
 }
