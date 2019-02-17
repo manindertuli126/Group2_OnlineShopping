@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		379D9EDC2218BF070013D2BF /* stringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D9EDB2218BF070013D2BF /* stringExtension.swift */; };
 		9B1330CC2217A37C00E2003F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1330CB2217A37C00E2003F /* main.swift */; };
 		9B1330D72217A3E300E2003F /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1330D62217A3E300E2003F /* Customer.swift */; };
 		9B1330D92217A3EE00E2003F /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1330D82217A3EE00E2003F /* Admin.swift */; };
 		9B1330DE2217A69000E2003F /* iDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1330DD2217A69000E2003F /* iDisplay.swift */; };
-		9B1330E22217A71300E2003F /* RegisterAndLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1330E12217A71300E2003F /* RegisterAndLogin.swift */; };
 		9B1330E42217A76500E2003F /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1330E32217A76500E2003F /* UserDetails.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,12 +28,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		379D9EDB2218BF070013D2BF /* stringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringExtension.swift; sourceTree = "<group>"; };
 		9B1330C82217A37C00E2003F /* Group2_OnlineShopping */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Group2_OnlineShopping; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1330CB2217A37C00E2003F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9B1330D62217A3E300E2003F /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		9B1330D82217A3EE00E2003F /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		9B1330DD2217A69000E2003F /* iDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iDisplay.swift; sourceTree = "<group>"; };
-		9B1330E12217A71300E2003F /* RegisterAndLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAndLogin.swift; sourceTree = "<group>"; };
 		9B1330E32217A76500E2003F /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,10 +48,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		379D9EDA2218BEE10013D2BF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				379D9EDB2218BF070013D2BF /* stringExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		9B1330BF2217A37C00E2003F = {
 			isa = PBXGroup;
 			children = (
-				9B1330E02217A6F900E2003F /* Functions */,
+				379D9EDA2218BEE10013D2BF /* Extension */,
 				9B1330DF2217A6B400E2003F /* Display */,
 				9B1330D52217A3C300E2003F /* Orders */,
 				9B1330D42217A3BB00E2003F /* Shopping */,
@@ -80,9 +88,9 @@
 		9B1330D32217A3A100E2003F /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				9B1330E32217A76500E2003F /* UserDetails.swift */,
 				9B1330D62217A3E300E2003F /* Customer.swift */,
 				9B1330D82217A3EE00E2003F /* Admin.swift */,
-				9B1330E32217A76500E2003F /* UserDetails.swift */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -107,14 +115,6 @@
 				9B1330DD2217A69000E2003F /* iDisplay.swift */,
 			);
 			path = Display;
-			sourceTree = "<group>";
-		};
-		9B1330E02217A6F900E2003F /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-				9B1330E12217A71300E2003F /* RegisterAndLogin.swift */,
-			);
-			path = Functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,10 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B1330CC2217A37C00E2003F /* main.swift in Sources */,
-				9B1330E22217A71300E2003F /* RegisterAndLogin.swift in Sources */,
 				9B1330D92217A3EE00E2003F /* Admin.swift in Sources */,
 				9B1330E42217A76500E2003F /* UserDetails.swift in Sources */,
 				9B1330DE2217A69000E2003F /* iDisplay.swift in Sources */,
+				379D9EDC2218BF070013D2BF /* stringExtension.swift in Sources */,
 				9B1330D72217A3E300E2003F /* Customer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

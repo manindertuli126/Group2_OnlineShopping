@@ -11,5 +11,6 @@ import Foundation
 print("Welcome")
 var t1 = Customer()
 t1.Register()
+t1.Login()
 
 

@@ -16,14 +16,18 @@ class Customer: UserDetails
     
     func Register(){
         print("Please enter your fullName:")
-        let FN = readLine()!
+        var FN = readLine()!
+        while FN.count<2 || FN.elementsEqual(" "){
+            print("Please enter your fullName:")
+            FN = readLine()!
+        }
         super.fullName = FN
         
         print("Please enter Login User name:")
         var LU = readLine()!
         while LU.count<6{
-                print("Username should be greater than 6 letters")
-                LU = readLine()!
+            print("Username should be greater than 6 letters")
+            LU = readLine()!
         }
         super.loginUser = LU
         
@@ -36,13 +40,17 @@ class Customer: UserDetails
         super.loginUserPassword = LUP
         
         print("Please enter your Address:")
-        let A = readLine()!
+        var A = readLine()!
         self.address = A
+        while A.count<2 || A.elementsEqual(" "){
+            print("Please enter your fullName:")
+            A = readLine()!
+        }
         
         print("Please enter your 10 digit Phone Number:")
         var P = Int(readLine()!)
-        while phone<999999999{
-            print("Phone should be greater than 9 digits")
+        while P!<999999999{
+            print("Phone number must be of 10 digits")
             P = Int(readLine()!)
         }
         self.phone = P
@@ -50,7 +58,7 @@ class Customer: UserDetails
         print("Please enter email ID:")
         var E = readLine()!
         while !(loginUserPassword.verifyEmail()){
-            print("Username should be greater than 6 letters")
+            print("Please enter a valid email ID.")
             E = readLine()!
         }
         self.email = E
