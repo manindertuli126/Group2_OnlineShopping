@@ -15,10 +15,10 @@ class Customer: UserDetails
     var email : String!
     
     func Register(){
-        print("Please enter your fullName:")
+        print("Please enter Full Name:")
         var FN = readLine()!
         while FN.count<2 || FN.elementsEqual(" "){
-            print("Please enter your fullName:")
+            print("Please enter Full Name:")
             FN = readLine()!
         }
         super.fullName = FN
@@ -49,7 +49,7 @@ class Customer: UserDetails
         
         print("Please enter your 10 digit Phone Number:")
         var P = Int(readLine()!)
-        while P!<999999999{
+        while P!<999999999 || P!>9999999999{
             print("Phone number must be of 10 digits")
             P = Int(readLine()!)
         }
@@ -57,17 +57,29 @@ class Customer: UserDetails
         
         print("Please enter email ID:")
         var E = readLine()!
-        while !(loginUserPassword.verifyEmail()){
+        while !(E.verifyEmail()){
             print("Please enter a valid email ID.")
             E = readLine()!
         }
         self.email = E
-        print("Username: \(String(describing: super.fullName)) is registered successfully.")
+        print("Username: \(FN) is registered successfully.")
 //        super.init(loginUser:loginUser, fullName:fullName, loginUserPassword:loginUserPassword)
     }
     
     func Login(){
-        
+        print("Login User:")
+        var validLoginUser = readLine()!
+        while !(super.loginUser == validLoginUser){
+            print("Invalid username entered.")
+            validLoginUser = readLine()!
+        }
+        print("Password:")
+        var validLoginPassword = readLine()!
+        while !(super.loginUserPassword==validLoginPassword){
+            print("Invalid password entered.")
+            validLoginPassword = readLine()!
+        }
+        print("Login successful. Welcome \(validLoginUser)")
     }
     
     func displayUserInfo(){
