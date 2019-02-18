@@ -34,7 +34,7 @@ class Customer: UserDetails
         print("Please enter Password:")
         var LUP = readLine()!
         while !(LUP.verifyPassword()){
-            print("Password must contain one uppercase, one digit and one lowercase.")
+            print("Password needs to be of length 8 and must contains one uppercase, one digit and one lowercase.")
             LUP = readLine()!
         }
         super.loginUserPassword = LUP
@@ -67,6 +67,9 @@ class Customer: UserDetails
     }
     
     func Login(){
+        if super.loginUser==nil || super.loginUser==""{
+            print("No user is register to login.")
+        }else{
         print("Login User:")
         var validLoginUser = readLine()!
         while !(super.loginUser == validLoginUser){
@@ -80,6 +83,7 @@ class Customer: UserDetails
             validLoginPassword = readLine()!
         }
         print("Login successful. Welcome \(validLoginUser)")
+    }
     }
     
     func displayUserInfo(){

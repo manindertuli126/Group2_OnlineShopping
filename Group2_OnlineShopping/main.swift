@@ -20,16 +20,18 @@ repeat{
     switch userOption{
     case 1:
         customer.Register()
+        exit="n"
         break
     case 2:
         customer.Login()
+        exit="n"
         break
     case 3:
         print("Do you want to exit? (Y/N)")
         exit = readLine()!.lowercased()
         break
     default:
-        print("Invalid option selected.")
+        print("Invalid option selected.\n")
         exit="n"
     }
 }while(exit=="n")
