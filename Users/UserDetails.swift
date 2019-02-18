@@ -8,10 +8,11 @@
 
 import Foundation
 
-public class UserDetails{
-    var loginUser : String!
-    var fullName : String!
-    var loginUserPassword : String!
+public class UserDetails: iDisplay{
+    
+    var loginUser : String
+    var fullName : String
+    var loginUserPassword : String
     
     init() {
         self.loginUser = String()
@@ -24,4 +25,8 @@ public class UserDetails{
         self.fullName = fullName
         self.loginUserPassword = loginUserPassword
 }
+    
+    func displayData() {
+        print("Login User: \(loginUser.description) \nFullName: \(fullName.description) \n")
+    }
 }

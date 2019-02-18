@@ -26,3 +26,9 @@ extension String{
         return passwordTest.evaluate(with: self)
     }
 }
+
+enum gender : CaseIterable{
+    case Male
+    case Female
+    case Others
+}

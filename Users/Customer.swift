@@ -86,7 +86,12 @@ class Customer: UserDetails
     }
     }
     
-    func displayUserInfo(){
-        print("")
+    override func displayData() {
+        super.displayData()
+        print("Address: \(address.description) \nPhone Number: \(phone.description) \nEmail: \(email.description) \n")
+    }
+    
+    func displayMenu(){
+        print("Please select an option below")
     }
 }
