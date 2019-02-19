@@ -10,12 +10,13 @@ import Foundation
 
 print("********* \nWelcome \n*********")
 var customer = Customer()
+var item = ShoppingCart()
 
 var exit : String!
 var userOption : Int?
 
 repeat{
-    print("Please select an option: \n1 - Register \n2 - Login \n3 - Exit")
+    print("\nPlease select an option: \n1 - Register \n2 - Login \n3 - Exit")
     userOption = Int(readLine()!)
     switch userOption{
     case 1:
@@ -24,6 +25,7 @@ repeat{
         break
     case 2:
         customer.Login()
+        item.showListOfItems()
         exit="n"
         break
     case 3:
