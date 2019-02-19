@@ -12,11 +12,7 @@ class ShoppingCart : UserDetails
     var shoppingCartId : Int!
     var itemID : Int!
     var itemListAndId = Array<String>()
-    var osAndFeature = [String]()
-    
-    override init(){
-        osAndFeature = [OS: ("iOS","Android"), SF: ("Facial Recogination","Fingerprint Scanner")]
-    }
+    var osAndFeature = (OS:("iOS","Android"), SF:("Facial Recogination","Fingerprint Scanner"))
     
     func showListOfItems(){
         itemListAndId.append("1- Iphone X")
@@ -32,22 +28,22 @@ class ShoppingCart : UserDetails
         let userSelectedItem = Int(readLine()!)!
         switch userSelectedItem{
         case 1:
-            print("Product details- \nBrand: Apple \nOperating system: \(OS.0) \nScreen size: 5.8 inches screen \nSecurity features: \(SF.0) \nStorage capacity: 256 GB")
+            print("Product details- \nBrand: Apple \nOperating system: \(osAndFeature.OS.0) \nScreen size: 5.8 inches screen \nSecurity features: \(osAndFeature.SF.0) \nStorage capacity: 256 GB")
             break
         case 2:
-            print("Product details- \nBrand: Samsung \nOperating system: \(OS.1) \nScreen size: 5.8 inches screen \nSecurity features: \(SF.0), \(SF.1) \nStorage capacity: 128 GB")
+            print("Product details- \nBrand: Samsung \nOperating system: \(osAndFeature.OS.1) \nScreen size: 5.8 inches screen \nSecurity features: \(osAndFeature.SF.0), \(osAndFeature.SF.1) \nStorage capacity: 128 GB")
             break
         case 3:
-            print("Product details- \nBrand: Xiaomi \nOperating system: \(OS.1) \nScreen size: 6.3 inches screen \nSecurity features: \(SF.1) \nStorage capacity: 64 GB")
+            print("Product details- \nBrand: Xiaomi \nOperating system: \(osAndFeature.OS.1) \nScreen size: 6.3 inches screen \nSecurity features: \(osAndFeature.SF.1) \nStorage capacity: 64 GB")
             break
         case 4:
-            print("Product details- \nBrand: Google \nOperating system: \(OS.1) \nScreen size: 5.0 inches screen \nSecurity features: \(SF.0), \(SF.1) \nStorage capacity: 64 GB")
+            print("Product details- \nBrand: Google \nOperating system: \(osAndFeature.OS.1) \nScreen size: 5.0 inches screen \nSecurity features: \(osAndFeature.SF.0), \(osAndFeature.SF.1) \nStorage capacity: 64 GB")
             break
         case 5:
-            print("Product details- \nBrand: OnePlus \nOperating system: \(OS.1) \nScreen size: 6.4 inches screen \nSecurity features: \(SF.0), \(SF.1) \nStorage capacity: 128 GB")
+            print("Product details- \nBrand: OnePlus \nOperating system: \(osAndFeature.OS.1) \nScreen size: 6.4 inches screen \nSecurity features: \(osAndFeature.SF.0), \(osAndFeature.SF.1) \nStorage capacity: 128 GB")
             break
         case 6:
-            print("Product details- \nBrand: Huawei \nOperating system: \(OS.1) \nScreen size: 6.0 inches screen \nSecurity features: \(SF.0) \nStorage capacity: 256 GB")
+            print("Product details- \nBrand: Huawei \nOperating system: \(osAndFeature.OS.1) \nScreen size: 6.0 inches screen \nSecurity features: \(osAndFeature.SF.0) \nStorage capacity: 256 GB")
             break
         default:
             print("Invalid option selected.\n")
